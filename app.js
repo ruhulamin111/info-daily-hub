@@ -17,7 +17,7 @@ const displayNews = (data) => {
         highlightDiv.classList.add('py-5')
         highlightDiv.innerHTML = `
         <div>
-            <a href="#">
+            <a href="${article.url}" target="_blank">
                 <img src="${article.urlToImage}"  alt="" class="w-full object-cover">
             </a>
         </div>
@@ -33,15 +33,15 @@ const displayNews = (data) => {
 
     // news left 
     const newsLeft = document.getElementById('left')
-    news.slice(3, 7).map(portal => {
+    news.slice(3, 7).map(article => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
             <h1 class="text-2xl hover:text-one font-semibold py-2">
-                <a href="#">${portal.title}</a>
+                <a href="${article.url}" target="_blank">${article.title}</a>
             </h1>
-            <p class="leading-6 tracking-wide">${portal.description}</p>
+            <p class="leading-6 tracking-wide">${article.description}</p>
         </div>
         `
         newsLeft.appendChild(highlightLeft)
@@ -49,15 +49,15 @@ const displayNews = (data) => {
 
     // news right 
     const newsRight = document.getElementById('right')
-    news.slice(8, 12).map(portalr => {
+    news.slice(8, 12).map(item => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
             <h1 class="text-2xl hover:text-one font-semibold py-2">
-                <a href="#">${portalr.title}</a>
+                <a href="${item.url}" target="_blank">${item.title}</a>
             </h1>
-            <p class="leading-6 tracking-wide">${portalr.description}</p>
+            <p class="leading-6 tracking-wide">${item.description}</p>
         </div>
         `
         newsRight.appendChild(highlightLeft)
@@ -70,7 +70,7 @@ const displayNews = (data) => {
         updateDiv.classList.add('py-2')
         updateDiv.innerHTML = `
         <div class="smooth">
-            <a href="#" class="">
+            <a href="${item.url}" target="_blank">
                 <img src="${item.urlToImage}"  alt="" class="w-full object-cover h-48">
             </a>
         </div>
