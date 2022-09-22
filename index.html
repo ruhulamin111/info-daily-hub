@@ -8,22 +8,83 @@
     <title>Info Daily Hub</title>
     <!-- style sheet  -->
     <link rel="stylesheet" href="style.css">
+    <!-- css framework  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome icon  -->
+    <script src="https://kit.fontawesome.com/166fb70d22.js" crossorigin="anonymous"></script>
+    <!-- custom theme  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        one: '#E63946',
+                        two: '#F1FAEE',
+                        three: '#A8DADC',
+                        four: '#457B9D',
+                        five: '#1D3557',
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
 
 <body>
-    <header>
-
+    <header class=" lg:border-b-2">
+        <nav class="lg:flex justify-between items-center h-16 w-11/12 mx-auto">
+            <div>
+                <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold" href="#">
+                    <i class="fa-solid fa-bars text-xl "></i>
+                </a>
+            </div>
+            <div>
+                <ul class="lg:flex gap-8 text-xl font-medium">
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">World</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">Country
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">Lifestyle</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">Business</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold"
+                            href="#">Economy</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a class="hover:text-one hover:border-b-2 hover:border-one pb-5 hover:font-semibold" href="#">
+                    <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main>
+
+
 
     </main>
 
     <footer>
 
     </footer>
-
     <!-- javascript file  -->
     <script src="./app.js"></script>
 </body>
