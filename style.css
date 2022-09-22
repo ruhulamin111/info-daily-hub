@@ -8,3 +8,15 @@
 body {
     font-family: 'Gantari', sans-serif;
 }
+
+.smooth {
+    overflow: hidden;
+}
+
+.smooth img {
+    transition: transform 1s;
+}
+
+.smooth:hover img {
+    transform: scale(1.1);
+}

@@ -9,11 +9,9 @@ loadNews()
 
 const displayNews = (data) => {
     const news = data.articles;
-    const newsDiv = document.getElementById('highlight')
-    const newsLeft = document.getElementById('left')
-    const newsRight = document.getElementById('right')
 
     // news middle 
+    const newsDiv = document.getElementById('highlight')
     news.slice(0, 2).map(article => {
         const highlightDiv = document.createElement('div')
         highlightDiv.classList.add('py-5')
@@ -34,6 +32,7 @@ const displayNews = (data) => {
     })
 
     // news left 
+    const newsLeft = document.getElementById('left')
     news.slice(3, 7).map(portal => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
@@ -49,6 +48,7 @@ const displayNews = (data) => {
     })
 
     // news right 
+    const newsRight = document.getElementById('right')
     news.slice(8, 12).map(portalr => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
@@ -63,6 +63,25 @@ const displayNews = (data) => {
         newsRight.appendChild(highlightLeft)
     })
 
+    // update part 
+    const update = document.getElementById('update')
+    news.slice(13, 17).map(item => {
+        const updateDiv = document.createElement('div')
+        updateDiv.classList.add('py-2')
+        updateDiv.innerHTML = `
+        <div class="smooth">
+            <a href="#" class="">
+                <img src="${item.urlToImage}"  alt="" class="w-full object-cover h-48">
+            </a>
+        </div>
+        <div>
+            <h1 class="text-2xl text-five font-semibold py-2">
+            ${item.title}
+            </h1>            
+        </div>
+        `
+        update.appendChild(updateDiv)
+    })
 
 
 }
