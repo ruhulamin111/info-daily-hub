@@ -31,10 +31,11 @@ const displayNews = (data) => {
 
     // news left 
     const newsLeft = document.getElementById('left')
-    news.slice(3, 7).forEach(article => {
-        const highlightLeft = document.createElement('div')
-        highlightLeft.classList.add('py-2')
-        highlightLeft.innerHTML = `
+    {
+        news.slice(3, 7).forEach(article => {
+            const highlightLeft = document.createElement('div')
+            highlightLeft.classList.add('py-2')
+            highlightLeft.innerHTML = `
         <div>
             <h1 class="text-xl hover:text-one font-semibold py-2">
                 <a href="${article.url}" target="_blank">${article.title}</a>
@@ -42,15 +43,17 @@ const displayNews = (data) => {
             <p class="leading-6 tracking-wide">${article.description}</p>
         </div>
         `
-        newsLeft.appendChild(highlightLeft)
-    })
+            newsLeft.appendChild(highlightLeft)
+        })
+    }
 
     // news right 
     const newsRight = document.getElementById('right')
-    news.slice(8, 12).forEach(item => {
-        const highlightLeft = document.createElement('div')
-        highlightLeft.classList.add('py-2')
-        highlightLeft.innerHTML = `
+    {
+        news.slice(8, 12).forEach(item => {
+            const highlightLeft = document.createElement('div')
+            highlightLeft.classList.add('py-2')
+            highlightLeft.innerHTML = `
         <div>
             <h1 class="text-xl hover:text-one font-semibold py-2">
                 <a href="${item.url}" target="_blank">${item.title}</a>
@@ -58,15 +61,16 @@ const displayNews = (data) => {
             <p class="leading-6 tracking-wide">${item.description}</p>
         </div>
         `
-        newsRight.appendChild(highlightLeft)
-    })
-
+            newsRight.appendChild(highlightLeft)
+        })
+    }
     // update part 
     const update = document.getElementById('update')
-    news.slice(13, 17).forEach(item => {
-        const updateDiv = document.createElement('div')
-        updateDiv.classList.add('py-2')
-        updateDiv.innerHTML = `
+    {
+        news.slice(13, 17).forEach(item => {
+            const updateDiv = document.createElement('div')
+            updateDiv.classList.add('py-2')
+            updateDiv.innerHTML = `
         <div class="smooth">
             <a href="${item.url}" target="_blank">
                 <img src="${item.urlToImage}"  alt="" class="w-full object-cover h-48">
@@ -78,8 +82,9 @@ const displayNews = (data) => {
             </h1>            
         </div>
         `
-        update.appendChild(updateDiv)
-    })
+            update.appendChild(updateDiv)
+        })
+    }
 }
 
 
@@ -92,16 +97,18 @@ loadOpinion()
 
 const showOpinion = (data) => {
     const opinion = document.getElementById('opinion')
-    data.slice(0, 3).forEach(user => {
-        const userDiv = document.createElement('div')
-        userDiv.classList.add('py-2')
-        userDiv.innerHTML = `
+    {
+        data.slice(0, 3).forEach(user => {
+            const userDiv = document.createElement('div')
+            userDiv.classList.add('py-2')
+            userDiv.innerHTML = `
         <div class="text-lg bg-two p-3 h-full">
         <p class="pb-4 ">${user.body}</p>
         <h1 class=" text-one">${user.name}</h1>
         <h1 ><i>${user.email}</i></h1>      
         </div>
         `
-        opinion.appendChild(userDiv)
-    })
+            opinion.appendChild(userDiv)
+        })
+    }
 }
