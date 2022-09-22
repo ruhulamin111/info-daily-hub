@@ -83,5 +83,30 @@ const displayNews = (data) => {
         update.appendChild(updateDiv)
     })
 
+}
+
+// https://jsonplaceholder.typicode.com/comments
+const loadOpinion = () => {
+    fetch('https://jsonplaceholder.typicode.com/comments')
+        .then(res => res.json())
+        .then(data => showOpinion(data))
+}
+loadOpinion()
+
+const showOpinion = (data) => {
+    const opinion = document.getElementById('opinion')
+    data.slice(0, 3).map(user => {
+        const userDiv = document.createElement('div')
+        userDiv.classList.add('py-2')
+        userDiv.innerHTML = `
+        <div class="text-lg">
+        <p class="pb-4">${user.body}</p>
+        <h1>${user.name}</h1>
+        <h1 ><i>${user.email}</i></h1>      
+        </div>
+        `
+        opinion.appendChild(userDiv)
+    })
+
 
 }
