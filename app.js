@@ -14,7 +14,7 @@ const displayNews = (data) => {
     const newsRight = document.getElementById('right')
 
     // news middle 
-    news.slice(1, 3).map(article => {
+    news.slice(0, 2).map(article => {
         const highlightDiv = document.createElement('div')
         highlightDiv.classList.add('py-5')
         highlightDiv.innerHTML = `
@@ -34,7 +34,7 @@ const displayNews = (data) => {
     })
 
     // news left 
-    news.slice(6, 10).map(portal => {
+    news.slice(3, 7).map(portal => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
@@ -49,7 +49,7 @@ const displayNews = (data) => {
     })
 
     // news right 
-    news.slice(12, 16).map(portalr => {
+    news.slice(8, 12).map(portalr => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
