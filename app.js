@@ -14,7 +14,7 @@ const displayNews = (data) => {
     const newsRight = document.getElementById('right')
 
     // news middle 
-    news.slice(0, 2).map(article => {
+    news.slice(1, 3).map(article => {
         const highlightDiv = document.createElement('div')
         highlightDiv.classList.add('py-5')
         highlightDiv.innerHTML = `
@@ -34,30 +34,30 @@ const displayNews = (data) => {
     })
 
     // news left 
-    news.slice(6, 10).map(article => {
+    news.slice(6, 10).map(portal => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
             <h1 class="text-2xl hover:text-one font-semibold py-2">
-                <a href="#">${article.title}</a>
+                <a href="#">${portal.title}</a>
             </h1>
-            <p class="leading-6 tracking-wide">${article.description}</p>
+            <p class="leading-6 tracking-wide">${portal.description}</p>
         </div>
         `
         newsLeft.appendChild(highlightLeft)
     })
 
     // news right 
-    news.slice(12, 16).map(article => {
+    news.slice(12, 16).map(portalr => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
             <h1 class="text-2xl hover:text-one font-semibold py-2">
-                <a href="#">${article.title}</a>
+                <a href="#">${portalr.title}</a>
             </h1>
-            <p class="leading-6 tracking-wide">${article.description}</p>
+            <p class="leading-6 tracking-wide">${portalr.description}</p>
         </div>
         `
         newsRight.appendChild(highlightLeft)
