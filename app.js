@@ -22,7 +22,7 @@ const displayNews = (data) => {
             </a>
         </div>
         <div>
-            <h1 class="text-2xl hover:text-one font-semibold py-2">
+            <h1 class="text-xl hover:text-one font-semibold py-2">
             <a href="#">${article.title}</a>
             </h1>
             <p class="leading-6 tracking-wide">${article.description}</p>
@@ -38,7 +38,7 @@ const displayNews = (data) => {
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
-            <h1 class="text-2xl hover:text-one font-semibold py-2">
+            <h1 class="text-xl hover:text-one font-semibold py-2">
                 <a href="${article.url}" target="_blank">${article.title}</a>
             </h1>
             <p class="leading-6 tracking-wide">${article.description}</p>
@@ -54,7 +54,7 @@ const displayNews = (data) => {
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
         <div>
-            <h1 class="text-2xl hover:text-one font-semibold py-2">
+            <h1 class="text-xl hover:text-one font-semibold py-2">
                 <a href="${item.url}" target="_blank">${item.title}</a>
             </h1>
             <p class="leading-6 tracking-wide">${item.description}</p>
@@ -75,7 +75,7 @@ const displayNews = (data) => {
             </a>
         </div>
         <div>
-            <h1 class="text-2xl text-five font-semibold py-2">
+            <h1 class="text-xl text-five font-semibold py-2">
             ${item.title}
             </h1>            
         </div>
@@ -99,9 +99,9 @@ const showOpinion = (data) => {
         const userDiv = document.createElement('div')
         userDiv.classList.add('py-2')
         userDiv.innerHTML = `
-        <div class="text-lg">
-        <p class="pb-4">${user.body}</p>
-        <h1>${user.name}</h1>
+        <div class="text-lg bg-two p-3 h-full">
+        <p class="pb-4 ">${user.body}</p>
+        <h1 class=" text-one">${user.name}</h1>
         <h1 ><i>${user.email}</i></h1>      
         </div>
         `
