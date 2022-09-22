@@ -10,7 +10,7 @@ const displayNews = (data) => {
 
     // news middle 
     const newsDiv = document.getElementById('highlight')
-    news.slice(0, 2).map(article => {
+    news.slice(0, 2).forEach(article => {
         const highlightDiv = document.createElement('div')
         highlightDiv.classList.add('py-5')
         highlightDiv.innerHTML = `
@@ -31,7 +31,7 @@ const displayNews = (data) => {
 
     // news left 
     const newsLeft = document.getElementById('left')
-    news.slice(3, 7).map(article => {
+    news.slice(3, 7).forEach(article => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
@@ -47,7 +47,7 @@ const displayNews = (data) => {
 
     // news right 
     const newsRight = document.getElementById('right')
-    news.slice(8, 12).map(item => {
+    news.slice(8, 12).forEach(item => {
         const highlightLeft = document.createElement('div')
         highlightLeft.classList.add('py-2')
         highlightLeft.innerHTML = `
@@ -63,7 +63,7 @@ const displayNews = (data) => {
 
     // update part 
     const update = document.getElementById('update')
-    news.slice(13, 17).map(item => {
+    news.slice(13, 17).forEach(item => {
         const updateDiv = document.createElement('div')
         updateDiv.classList.add('py-2')
         updateDiv.innerHTML = `
@@ -82,7 +82,7 @@ const displayNews = (data) => {
     })
 }
 
-// https://jsonplaceholder.typicode.com/comments
+
 const loadOpinion = () => {
     fetch('https://jsonplaceholder.typicode.com/comments')
         .then(res => res.json())
@@ -92,7 +92,7 @@ loadOpinion()
 
 const showOpinion = (data) => {
     const opinion = document.getElementById('opinion')
-    data.slice(0, 3).map(user => {
+    data.slice(0, 3).forEach(user => {
         const userDiv = document.createElement('div')
         userDiv.classList.add('py-2')
         userDiv.innerHTML = `
